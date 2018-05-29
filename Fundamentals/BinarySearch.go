@@ -16,3 +16,22 @@ func Rank(key int, a []int) int {
 	}
 	return -1
 }
+
+// RankR 递归版二分查找法
+func RankR(key int, a []int) int {
+	return rankr(key, a, 0, len(a)-1)
+}
+
+func rankr(key int, a []int, lo, hi int) int {
+	if lo > hi {
+		return -1
+	}
+	mid := lo + (hi-lo)/2
+	if key < a[mid] {
+		return rankr(key, a, lo, mid-1)
+	}
+	if key > a[mid] {
+		return rankr(key, a, mid+1, hi)
+	}
+	return mid
+}
