@@ -1,6 +1,6 @@
 package Fundamentals
 
-// Rank 二分查找法寻找 a 中值为 key 的秩
+// Rank 二分查找法寻找 a 中值为 key 的秩,a 已升序排列
 func Rank(key int, a []int) int {
 	lo := 0
 	hi := len(a) - 1
