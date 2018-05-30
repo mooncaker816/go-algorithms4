@@ -21,3 +21,38 @@ func ExampleBetween01() {
 	// false
 	// false
 }
+
+func ExampleInt2BinStr() {
+	fmt.Println(Int2BinStr(4))
+	// Output:
+	// 100
+}
+
+func ExamplePrintBools() {
+	bools := [][]bool{
+		{true, true, false, false},
+		{false, true, false, true, true, true},
+		{true, false, true, false},
+		{true, true, true, false},
+	}
+	PrintBools(bools)
+	// Output:
+	// h 0 1 2 3 4 5
+	// 0 * * X X
+	// 1 X * X * * *
+	// 2 * X * X
+	// 3 * * * X
+}
+
+func ExamplePrintTMatrix() {
+	m := [][]int{
+		{2, 3, 4, 5},
+		{9, 8, 7, 6},
+	}
+	PrintTMatrix(m)
+	// Output:
+	//    2   9
+	//    3   8
+	//    4   7
+	//    5   6
+}
