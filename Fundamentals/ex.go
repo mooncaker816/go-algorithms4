@@ -122,3 +122,19 @@ func Histogram(a []int, m int) []int {
 	}
 	return ret
 }
+
+// Fibo 计算第 n 个斐波那契项
+// Ex 1.1.19
+func Fibo(n int) int {
+	f1, f2 := 1, 1
+	if n == 0 {
+		return 0
+	}
+	if n <= 2 {
+		return 1
+	}
+	for i := 3; i <= n; i++ {
+		f1, f2 = f2, f1+f2
+	}
+	return f2
+}

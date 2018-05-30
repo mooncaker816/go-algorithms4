@@ -75,3 +75,13 @@ func ExampleHistogram() {
 	// [0 3 4 2 0 1 0 1]
 	// true
 }
+
+func ExampleFibo() {
+	fmt.Println(Fibo(10))
+	fmt.Println(Fibo(40))
+	fmt.Println(Fibo(92))
+	// Output:
+	// 55
+	// 102334155
+	// 7540113804746346429
+}
