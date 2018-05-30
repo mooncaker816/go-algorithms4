@@ -83,6 +83,7 @@ func PrintBools(bs [][]bool) {
 }
 
 // PrintTMatrix 打印 a 的转置
+// Ex 1.1.13
 func PrintTMatrix(a [][]int) {
 	for j := 0; j < len(a[0]); j++ {
 		for i := 0; i < len(a); i++ {
@@ -90,4 +91,34 @@ func PrintTMatrix(a [][]int) {
 		}
 		fmt.Println()
 	}
+}
+
+// Lg 计算不大于logn的最大整数
+// Ex 1.1.14
+func Lg(n int) int {
+	p := uint(0)
+	for {
+		if 1<<p > n {
+			break
+		}
+		p++
+	}
+	return int(p - 1)
+}
+
+// Histogram Ex 1.1.15
+func Histogram(a []int, m int) []int {
+	mp := make(map[int]int)
+	ret := make([]int, m)
+	for _, v := range a {
+		mp[v]++
+	}
+	for i := 0; i < m; i++ {
+		if v, ok := mp[i]; ok {
+			ret[i] = v
+		} else {
+			ret[i] = 0
+		}
+	}
+	return ret
 }

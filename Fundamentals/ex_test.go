@@ -56,3 +56,22 @@ func ExamplePrintTMatrix() {
 	//    4   7
 	//    5   6
 }
+
+func ExampleLg() {
+	fmt.Println(Lg(1024))
+	fmt.Println(Lg(1025))
+	fmt.Println(Lg(1023))
+	// Output:
+	// 10
+	// 10
+	// 9
+}
+
+func ExampleHistogram() {
+	a := []int{1, 1, 2, 3, 1, 7, 5, 3, 2, 2, 2}
+	fmt.Println(Histogram(a, 8))
+	fmt.Println(Sum(Histogram(a, 8)) == len(a))
+	// Output:
+	// [0 3 4 2 0 1 0 1]
+	// true
+}
