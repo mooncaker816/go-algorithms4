@@ -85,3 +85,9 @@ func ExampleFibo() {
 	// 102334155
 	// 7540113804746346429
 }
+
+func ExampleLnN() {
+	fmt.Println(LnN(5))
+	// Output:
+	// 4.787491742782046
+}

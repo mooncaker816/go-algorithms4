@@ -2,6 +2,7 @@ package Fundamentals
 
 import (
 	"fmt"
+	"math"
 	"strconv"
 	"strings"
 )
@@ -137,4 +138,13 @@ func Fibo(n int) int {
 		f1, f2 = f2, f1+f2
 	}
 	return f2
+}
+
+// LnN 计算 ln(n!)
+// Ex 1.1.20
+func LnN(n uint) float64 {
+	if n <= 1 {
+		return 0
+	}
+	return math.Log(float64(n)) + LnN(n-1)
 }
